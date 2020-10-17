@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
-div {
-  /* border: 1px solid red; */ 
-}
-
 body {
   font-family: "Kanit", sans-serif;
-  /* font-size: 1rem; */
 }
 
 .header {
@@ -21,14 +16,15 @@ body {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .header {
     flex-direction: row;
+    height: 4rem;
   }
 
   .container-2 li {
     display: inline-block;
-    margin: 0 2rem;
+    padding: 0 2rem;
   }
 }
 
@@ -43,7 +39,7 @@ body {
   width: 100%;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .container-1 {
     flex: 1;
   }
@@ -64,7 +60,7 @@ body {
   color: #FD8D00;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .container-2 li {
     padding: 0 5rem;
   }
@@ -83,10 +79,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10rem 3rem;
+  align-items: center;
+  margin: 10rem auto;
 }
 
 .product img {
+  max-width: 30rem;
   width: 100%;
   height: auto;
 }
@@ -112,7 +110,7 @@ body {
 }
 
 
-.buttons {
+.buttons-product {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -120,12 +118,7 @@ body {
   width: 100%;
 }
 
-.product-img {
-  width: 85%;
-  margin: auto;
-}
-
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .product h1 {
     font-size: 2rem;
     text-align: left;
@@ -140,13 +133,15 @@ body {
 
   .product-text {
     width: 100%;
-    margin: 10rem 2rem;
+    margin: 10rem 4rem;
     
   }
 
   .product-img {
-    margin: 4rem 2rem 4rem 25rem;
-    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 4rem 1rem 4rem 2rem;
+    width: 100%;
     height: auto;
   }
 }
@@ -165,20 +160,66 @@ body {
   height: 2.2rem;
 }
 
+.button2 {
+  color: black;
+  font-family: "Kanit", sans-serif;
+  background-color: #FD8D00;
+  border: 1px solid #FD8D00;
+  border-radius: 0.2rem;
+  padding: 0.4rem 1rem;
+  -webkit-box-shadow: 0px 10px 20px 1px rgba(161,161,161,1);
+  -moz-box-shadow: 0px 10px 20px 1px rgba(161,161,161,1);
+  box-shadow: 0px 10px 20px 1px rgba(161,161,161,1); 
+  width: 7rem;
+  height: 2.2rem;
+}
+
 .button:hover {
   color: white;
   background-color: black;
   border: black;
   transform: scale(1.1);
+  cursor: pointer;
+}
+
+.button2:hover {
+  color: white;
+  background-color: black;
+  border: black;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.button3 {
+  color: black;
+  font-family: "Kanit", sans-serif;
+  background-color: #FD8D00;
+  border: 1px solid #FD8D00;
+  border-radius: 0.2rem;
+  padding: 0.4rem 1rem;
+  margin: 1rem auto;
+  -webkit-box-shadow: 0px 10px 20px 1px rgba(161,161,161,1);
+  -moz-box-shadow: 0px 10px 20px 1px rgba(161,161,161,1);
+  box-shadow: 0px 10px 20px 1px rgba(161,161,161,1); 
+  width: 7rem;
+  height: 2.2rem;
+}
+
+.button3:hover {
+  color: white;
+  background-color: black;
+  border: black;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1000px) {
-  .buttons {
+  .buttons-product {
     justify-content: flex-start;
     margin: 1rem 0; 
   }
 
-  .button{ 
+  .button { 
     margin-right: 1rem;
   }
 }
@@ -220,10 +261,6 @@ body {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px;
 }
 
-.grid-box:hover {
-  transform: scale(1.1);
-}  
-
 .grid-box h3 {
   text-align: center;
   font-size: 1.2rem;
@@ -258,22 +295,51 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center; 
-  
-  padding-top: 9rem;
 }
 
-.pricing h2 {
+.buttons-price {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+@media screen and (min-width: 768px) {
+  .pricing {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .pricing-header {
+    justify-content: center;
+  }
+}
+
+.pricing-header {
   text-align: center;
+  padding-top: 9rem;
   font-size: 2rem;
 }
 
 .pricing-box {
-  width: 50%;
-  padding: 1rem;
-  margin: 5rem auto 2rem auto;
+  justify-content: center;
+  max-width: 15rem;
+  padding: 1rem 3rem;
+  margin: 5rem auto 1rem auto;
   border-radius: 1rem;
   background-color: #fff8cd;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .pricing-box {
+    margin: 5rem 3rem 1rem 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .pricing-box {
+    margin: 5rem 5rem 1rem 5rem;
+  }
 }
 
 .pricing-box h3 {
@@ -292,23 +358,44 @@ body {
   font-weight: 600;
 }
 
-.pricing-box:hover {
-  transform: scale(1.1);
-} 
-
 .form {
-  max-width: 450px;
+  max-width: 18rem;
   font-family: "Kanit";
 	background: #fff8cd;
-	padding: 30px;
-	margin: 5rem auto;
+	padding: 1rem;
+  margin: 5rem auto 10rem auto;
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px;
-	border-radius: 10px;	
+  border-radius: 10px;	
+}
+
+.contact-header {
+  text-align: center;
+  margin-top: 14rem;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    max-width: 25rem;
+  }
 }
 
 .input-field {
+  background-color: #fff8cd;
+  font-family: "Kanit", sans-serif;
   width: 100%;
   height: 1.5rem;
+  border: none;
+  border-bottom: 1px solid #696773;
+}
+
+.input-field:focus {
+  outline: none;
+  border-bottom: 1px solid #5465FF;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff8cd inset;
 }
 
 .form li {
@@ -317,6 +404,25 @@ body {
 }
 
 .textarea-field {
+  font-family: "Kanit", sans-serif;
   width: 100%;
   height: 5rem;
+  border: none;
+  border-bottom: 1px solid rgb(107, 107, 107);
+  background-color: #fff8cd;
 }
+
+.textarea-field:focus {
+  outline: none;
+  border-bottom: 1px solid #5465FF;
+}
+
+footer {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3A3E3B;
+  color: white;
+}
+
